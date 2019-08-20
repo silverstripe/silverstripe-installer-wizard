@@ -1,0 +1,49 @@
+{
+    "name": "silverstripe/installer-wizard",
+    "description": "SilverStripe Installer UI",
+    "type": "silverstripe-vendormodule",
+    "homepage": "http://silverstripe.org",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "silverstripe",
+        "installer"
+    ],
+    "authors": [
+        {
+            "name": "SilverStripe",
+            "homepage": "http://silverstripe.com"
+        },
+        {
+            "name": "The SilverStripe Community",
+            "homepage": "http://silverstripe.org"
+        }
+    ],
+    "require": {
+        "silverstripe/recipe-cms": "^4.3",
+        "silverstripe/vendor-plugin": "^1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "expose": [
+        	"src/client/*"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\Dev\\Install": "src/",
+            "SilverStripe\\Dev\\Tests\\Install": "tests/php/"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/phpcs src/ tests/php/",
+        "lint-clean": "vendor/bin/phpcbf src/ tests/php/"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
