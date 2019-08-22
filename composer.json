@@ -36,8 +36,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripe\\Dev\\Install": "src/",
-            "SilverStripe\\Dev\\Tests\\Install": "tests/php/"
+            "SilverStripe\\Dev\\Install\\": "src/",
+            "SilverStripe\\Dev\\Tests\\Install\\": "tests/php/"
         }
     },
     "scripts": {
