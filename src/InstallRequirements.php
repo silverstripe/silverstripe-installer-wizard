@@ -194,7 +194,7 @@ class InstallRequirements
         ));
 
         // Check that we can identify the root folder successfully
-        $this->requireFile('vendor/silverstripe/framework/src/Dev/Install/config-form.html', array(
+        $this->requireFile('vendor/silverstripe/installer-wizard/src/config-form.html', array(
             "File permissions",
             "Does the webserver know where files are stored?",
             "The webserver isn't letting me identify where files are stored.",
