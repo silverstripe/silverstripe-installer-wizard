@@ -31,7 +31,9 @@
             "dev-master": "2.x-dev"
         },
         "expose": [
-        	"src/client/*"
+        	"src/client/images",
+        	"src/client/js",
+        	"src/client/styles"
         ]
     },
     "autoload": {

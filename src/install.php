@@ -12,7 +12,7 @@
 /**
  * PHP version check. Make sure we've got at least PHP 5.6.0 in the most friendly way possible
  */
-if (version_compare(phpversion(), '5.6.0', '<')) {
+if (version_compare(phpversion(), '7.1.0', '<')) {
     header($_SERVER['SERVER_PROTOCOL'] . " 500 Server Error");
     echo str_replace(
         '$PHPVersion',
@@ -22,4 +22,4 @@ if (version_compare(phpversion(), '5.6.0', '<')) {
     die();
 }
 
-include(__DIR__ . '/install5.php');
+include(__DIR__ . '/install7.php');

@@ -4,7 +4,7 @@
  ************************************************************************************
  **                                                                                **
  **  If you can read this text in your browser then you don't have PHP installed.  **
- **  Please install PHP 5.5.0 or higher.                                           **
+ **  Please install PHP 7.1.0 or higher.                                           **
  **                                                                                **
  ************************************************************************************
  ************************************************************************************/
@@ -37,11 +37,11 @@ if (function_exists('session_start') && !session_id()) {
 }
 
 // require composers autoloader
-require_once __DIR__ . '/../../includes/autoload.php';
+require_once __DIR__ . '../../../framework/src/includes/autoload.php';
 
 $usingEnv = empty($_POST) || !empty($_REQUEST['useEnv']);
 
-// Set default locale, but try and sniff from the user agent
+// Set default loz cale, but try and sniff from the user agent
 $locale = isset($_POST['locale']) ? $_POST['locale'] : 'en_US';
 
 // Discover which databases are available
@@ -107,8 +107,8 @@ if ($installFromCli && ($req->hasErrors() || $dbReq->hasErrors())) {
 // Path to client resources (copied through silverstripe/vendor-plugin)
 $base = rtrim(BASE_URL, '/') . '/';
 $clientPath = PUBLIC_DIR
-    ? 'resources/vendor/silverstripe/framework/src/Dev/Install/client'
-    : 'resources/silverstripe/framework/src/Dev/Install/client';
+    ? RESOURCES_DIR . '/vendor/silverstripe/installer-wizard/src/client'
+    : RESOURCES_DIR . '/silverstripe/installer-wizard/src/client';
 
 // If already installed, ensure the user clicked "reinstall"
 $expectedArg = $alreadyInstalled ? 'reinstall' : 'go';
