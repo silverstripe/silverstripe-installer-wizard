@@ -61,6 +61,7 @@ class Installer
         <html>
         <head>
             <meta charset="utf-8"/>
+            <meta name="robots" content="noindex">
             <title>Installing SilverStripe...</title>
             <link rel="stylesheet" type="text/css" href="<?=$clientPath; ?>/styles/install.css"/>
             <script src="//code.jquery.com/jquery-1.7.2.min.js"></script>
