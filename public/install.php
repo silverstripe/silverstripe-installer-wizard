@@ -11,7 +11,7 @@
 
 if (file_exists(__DIR__ . '/vendor/silverstripe/installer-wizard/src/install.php')) {
     include __DIR__ . '/vendor/silverstripe/installer-wizard/src/install.php';
-} elseif (file_exists(__DIR__ . '/../vendor/silverstripe/installer-wizard/install.php')) {
+} elseif (file_exists(__DIR__ . '/../vendor/silverstripe/installer-wizard/src/install.php')) {
     include __DIR__ . '/../vendor/silverstripe/installer-wizard/src/install.php';
 } else {
     include 'install-frameworkmissing.html';
